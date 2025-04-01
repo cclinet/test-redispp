@@ -1,0 +1,9 @@
+{
+  "dependencies": [
+    "bshoshany-thread-pool",
+    {
+      "name": "redis-plus-plus",
+      "features": ["cxx17"]
+    }
+  ]
+}

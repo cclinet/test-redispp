@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "configurePresets": [
+    {
+      "name": "mac_debug",
+      "displayName": "mac_debug",
+      "description": "mac debug presets",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "1",
+        "CMAKE_CXX_FLAGS": "-fsanitize=address  -fsanitize-recover=address -fno-stack-protector -fno-omit-frame-pointer"
+      }
+    },
+    {
+      "name": "mac_debug2",
+      "displayName": "mac_debug2",
+      "description": "mac debug presets",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "1"
+      }
+    },
+    {
+      "name": "linux_release",
+      "displayName": "linux_release",
+      "description": "linux release with debug info",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+        "CMAKE_TOOLCHAIN_FILE": "$env{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "1"
+      }
+    }
+  ]
+}
