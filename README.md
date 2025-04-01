@@ -6,3 +6,8 @@ Apple clang version 16.0.0 (clang-1600.0.26.4)
 Target: arm64-apple-darwin23.6.0
 Thread model: posix
 InstalledDir: /Library/Developer/CommandLineTools/usr/bin
+
+
+error log
+
+https://pastebin.com/eKPLj0rP
